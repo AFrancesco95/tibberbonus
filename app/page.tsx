@@ -70,22 +70,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="voordelen" className="py-20 md:py-28 scroll-mt-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Waarom Tibber?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Tibber is geen gewone energieleverancier. Met dynamische uurtarieven 
-              betaal je de echte inkoopprijs en bespaar je door slim te verbruiken.
-            </p>
-          </div>
-          <FeatureCards />
-        </div>
-      </section>
-
       {/* How It Works Section */}
       <section id="hoe-werkt-het" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4">
@@ -115,6 +99,22 @@ export default function Home() {
             </p>
           </div>
           <FAQ />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="voordelen" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Waarom Tibber?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Tibber is geen gewone energieleverancier. Met dynamische uurtarieven 
+              betaal je de echte inkoopprijs en bespaar je door slim te verbruiken.
+            </p>
+          </div>
+          <FeatureCards />
         </div>
       </section>
 
