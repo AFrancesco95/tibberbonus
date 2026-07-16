@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ReferralCode } from "@/components/referral-code"
 import { FeatureCards } from "@/components/feature-cards"
+import { HowItWorks } from "@/components/how-it-works"
 import { FAQ } from "@/components/faq"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 
@@ -82,6 +83,22 @@ export default function Home() {
             </p>
           </div>
           <FeatureCards />
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="hoe-werkt-het" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Hoe werkt het?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              In drie eenvoudige stappen activeer je jouw €50 tegoed met de
+              Tibber uitnodigingscode.
+            </p>
+          </div>
+          <HowItWorks />
         </div>
       </section>
 

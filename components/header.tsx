@@ -18,6 +18,12 @@ export function Header() {
             Voordelen
           </a>
           <a
+            href="#hoe-werkt-het"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Hoe werkt het?
+          </a>
+          <a
             href="#faq"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
