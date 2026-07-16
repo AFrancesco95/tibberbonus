@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { ReferralCode } from "@/components/referral-code"
 import { FeatureCards } from "@/components/feature-cards"
 import { HowItWorks } from "@/components/how-it-works"
+import { CurrentPeriod } from "@/components/current-period"
 import { FAQ } from "@/components/faq"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 
@@ -27,8 +28,7 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-primary-foreground/70 mb-6">
-            Tibber uitnodigingscode (referral code) · geldig in{" "}
-            {new Date().toLocaleDateString("nl-NL", { month: "long", year: "numeric" })}
+            Tibber uitnodigingscode (referral code) · geldig in <CurrentPeriod />
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 tracking-tight text-balance">
