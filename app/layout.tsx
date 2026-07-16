@@ -7,8 +7,19 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Tibber Referral Code 2026 - Ontvang €50 Tegoed | Dynamische Energie',
-  description: 'Gebruik mijn persoonlijke Tibber referral code en ontvang €50 tegoed. Stap over naar dynamische energie, bespaar op je energierekening en beheer je verbruik met de Tibber app. Actie geldig in 2026.',
+  title: 'Tibber Uitnodigingscode 2026 - Ontvang €50 Tegoed | Referral Code',
+  description: 'Gebruik mijn Tibber uitnodigingscode (referral code / invite code) en ontvang €50 tegoed voor de Tibber Store. Stap over naar dynamische energie, bespaar op je energierekening en beheer je verbruik met de Tibber app. Uitnodigingscode geldig in 2026.',
+  keywords: [
+    'Tibber uitnodigingscode',
+    'Tibber referral code',
+    'Tibber invite code',
+    'Tibber code',
+    'Tibber €50 tegoed',
+    'Tibber aanmelden',
+    'Tibber korting',
+    'dynamische energie',
+    'Tibber overstappen',
+  ],
   generator: 'v0.app',
   icons: {
     icon: [

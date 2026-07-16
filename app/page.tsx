@@ -4,6 +4,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ReferralCode } from "@/components/referral-code"
 import { FeatureCards } from "@/components/feature-cards"
+import { HowItWorks } from "@/components/how-it-works"
+import { CurrentPeriod } from "@/components/current-period"
 import { FAQ } from "@/components/faq"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 
@@ -26,8 +28,7 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-primary-foreground/70 mb-6">
-            Tibber referral code · geldig in{" "}
-            {new Date().toLocaleDateString("nl-NL", { month: "long", year: "numeric" })}
+            Tibber uitnodigingscode (referral code) · geldig in <CurrentPeriod />
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 tracking-tight text-balance">
@@ -40,9 +41,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Stap over naar Tibber en ontvang direct{" "}
-            <strong>€50 tegoed</strong> voor de Tibber Store. Dynamisch energiecontract 
-            met realtime inzicht in stroomprijs en verbruik via de Tibber app.
+            Meld je aan met mijn <strong>Tibber uitnodigingscode</strong> en ontvang direct{" "}
+            <strong>€50 tegoed</strong> voor de Tibber Store. Met dit dynamische energiecontract 
+            krijg je realtime inzicht in de stroomprijs en je verbruik via de Tibber app.
           </p>
 
           <ReferralCode code={REFERRAL_CODE} />
@@ -69,19 +70,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="voordelen" className="py-20 md:py-28 scroll-mt-20">
+      {/* How It Works Section */}
+      <section id="hoe-werkt-het" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Waarom Tibber?
+              Hoe werkt het?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Tibber is geen gewone energieleverancier. Met dynamische uurtarieven 
-              betaal je de echte inkoopprijs en bespaar je door slim te verbruiken.
+              In drie eenvoudige stappen activeer je jouw €50 tegoed met de
+              Tibber uitnodigingscode.
             </p>
           </div>
-          <FeatureCards />
+          <HowItWorks />
         </div>
       </section>
 
@@ -94,10 +95,26 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Heb je nog vragen? Hier vind je antwoorden op de meest gestelde
-              vragen over Tibber.
+              vragen over de Tibber uitnodigingscode en het €50 tegoed.
             </p>
           </div>
           <FAQ />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="voordelen" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Waarom Tibber?
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Tibber is geen gewone energieleverancier. Met dynamische uurtarieven 
+              betaal je de echte inkoopprijs en bespaar je door slim te verbruiken.
+            </p>
+          </div>
+          <FeatureCards />
         </div>
       </section>
 
