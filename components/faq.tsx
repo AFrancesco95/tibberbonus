@@ -9,18 +9,23 @@ import { REFERRAL_URL } from "@/lib/referral"
 
 const faqs = [
   {
-    question: "Hoe werkt de referral code?",
-    answer: `Gebruik mijn referral link om je aan te melden bij Tibber. Zodra je contract actief is, ontvang je automatisch €50 tegoed in de Tibber Store. Dit kun je gebruiken voor slimme producten zoals de Tibber Pulse of andere smart home apparaten.`,
+    question: "Hoe werkt de Tibber uitnodigingscode?",
+    answer: `Gebruik mijn Tibber uitnodigingscode (referral code) via de link om je aan te melden bij Tibber. Zodra je contract actief is, ontvang je automatisch €50 tegoed in de Tibber Store. Dit kun je gebruiken voor slimme producten zoals de Tibber Pulse of andere smart home apparaten.`,
     hasLink: true,
   },
   {
-    question: "Hoe lang is de referral code geldig?",
-    answer: `De referral code blijft actief zolang deze pagina online is. Je kunt de code op elk moment gebruiken. Het tegoed wordt automatisch toegevoegd aan je Tibber account zodra je contract actief is.`,
+    question: "Waar vul ik de Tibber uitnodigingscode in?",
+    answer: `De eenvoudigste manier is via mijn uitnodigingslink: de referral code wordt dan automatisch gekoppeld aan je aanmelding. Meld je je los aan? Dan kun je de Tibber invite code handmatig invullen tijdens het aanmeldproces in de Tibber app.`,
+    hasLink: true,
+  },
+  {
+    question: "Hoe lang is de Tibber uitnodigingscode geldig?",
+    answer: `De uitnodigingscode blijft actief zolang deze pagina online is. Je kunt de referral code op elk moment gebruiken. Het tegoed wordt automatisch toegevoegd aan je Tibber account zodra je contract actief is.`,
     hasLink: true,
   },
   {
     question: "Wanneer ontvang ik mijn €50 tegoed?",
-    answer: `Je ontvangt het tegoed zodra je Tibber-contract officieel actief is. Dit duurt meestal 1-2 weken na je aanmelding, afhankelijk van de overstapprocedure. Het tegoed verschijnt automatisch in je Tibber Store account.`,
+    answer: `Je ontvangt het tegoed zodra je Tibber-contract officieel actief is. Dit duurt meestal 1-2 weken na je aanmelding met de uitnodigingscode, afhankelijk van de overstapprocedure. Het tegoed verschijnt automatisch in je Tibber Store account.`,
     hasLink: true,
   },
   {
@@ -29,8 +34,8 @@ const faqs = [
     hasLink: true,
   },
   {
-    question: "Kan ik de referral code combineren met andere acties?",
-    answer: `De referral bonus staat los van andere Tibber-acties. Je ontvangt sowieso €50 tegoed via mijn link. Check de Tibber website voor eventuele lopende promoties die je kunt combineren.`,
+    question: "Kan ik de Tibber uitnodigingscode combineren met andere acties?",
+    answer: `De bonus van de uitnodigingscode staat los van andere Tibber-acties. Je ontvangt sowieso €50 tegoed via mijn referral link. Check de Tibber website voor eventuele lopende promoties die je kunt combineren.`,
     hasLink: true,
   },
 ]

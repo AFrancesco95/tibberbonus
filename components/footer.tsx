@@ -9,8 +9,9 @@ export function Footer() {
           <Info className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
           <p className="text-sm text-muted-foreground">
             <strong className="text-foreground">Let op:</strong> Deze website is
-            niet officieel verbonden aan Tibber. Dit is een persoonlijke
-            referral pagina waarmee je €50 tegoed ontvangt bij aanmelding.
+            niet officieel verbonden aan Tibber. Dit is een persoonlijke pagina
+            met een Tibber uitnodigingscode (referral code) waarmee je €50 tegoed
+            ontvangt bij aanmelding.
           </p>
         </div>
 

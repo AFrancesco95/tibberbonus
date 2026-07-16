@@ -26,7 +26,7 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-primary-foreground/70 mb-6">
-            Tibber referral code · geldig in{" "}
+            Tibber uitnodigingscode (referral code) · geldig in{" "}
             {new Date().toLocaleDateString("nl-NL", { month: "long", year: "numeric" })}
           </p>
 
@@ -40,9 +40,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Stap over naar Tibber en ontvang direct{" "}
-            <strong>€50 tegoed</strong> voor de Tibber Store. Dynamisch energiecontract 
-            met realtime inzicht in stroomprijs en verbruik via de Tibber app.
+            Meld je aan met mijn <strong>Tibber uitnodigingscode</strong> en ontvang direct{" "}
+            <strong>€50 tegoed</strong> voor de Tibber Store. Met dit dynamische energiecontract 
+            krijg je realtime inzicht in de stroomprijs en je verbruik via de Tibber app.
           </p>
 
           <ReferralCode code={REFERRAL_CODE} />
@@ -94,7 +94,7 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Heb je nog vragen? Hier vind je antwoorden op de meest gestelde
-              vragen over Tibber.
+              vragen over de Tibber uitnodigingscode en het €50 tegoed.
             </p>
           </div>
           <FAQ />
