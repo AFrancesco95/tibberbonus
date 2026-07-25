@@ -7,7 +7,7 @@ import {
 import { ExternalLink } from "lucide-react"
 import { REFERRAL_URL } from "@/lib/referral"
 
-const faqs = [
+export const faqs = [
   {
     question: "Hoe werkt de Tibber uitnodigingscode?",
     answer: `Gebruik mijn Tibber uitnodigingscode (referral code) via de link om je aan te melden bij Tibber. Zodra je contract actief is, ontvang je automatisch €50 tegoed in de Tibber Store. Dit kun je gebruiken voor slimme producten zoals de Tibber Pulse of andere smart home apparaten.`,
