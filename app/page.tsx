@@ -7,11 +7,13 @@ import { FeatureCards } from "@/components/feature-cards"
 import { HowItWorks } from "@/components/how-it-works"
 import { CurrentPeriod } from "@/components/current-period"
 import { FAQ } from "@/components/faq"
+import { StructuredData } from "@/components/structured-data"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData />
       <Header />
 
       {/* Hero Section */}
@@ -28,22 +30,23 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-primary-foreground/70 mb-6">
-            Tibber uitnodigingscode (referral code) · geldig in <CurrentPeriod />
+            Tibber code &amp; referral code · geldig in <CurrentPeriod />
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 tracking-tight text-balance">
-            Ontvang{" "}
+            Tibber Code:{" "}
             <span className="relative">
               <span className="relative z-10">{"€50"}</span>
               <span className="absolute -bottom-1 left-0 right-0 h-3 bg-primary-foreground/20 -rotate-1" />
             </span>{" "}
-            Tibber tegoed
+            Bonus &amp; Tegoed
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Meld je aan met mijn <strong>Tibber uitnodigingscode</strong> en ontvang direct{" "}
-            <strong>€50 tegoed</strong> voor de Tibber Store. Met dit dynamische energiecontract 
-            krijg je realtime inzicht in de stroomprijs en je verbruik via de Tibber app.
+            Meld je aan met mijn <strong>Tibber code</strong> (referral / uitnodigingscode) en
+            ontvang direct <strong>€50 bonus tegoed</strong> voor de Tibber Store. Met dit
+            dynamische energiecontract krijg je realtime inzicht in de stroomprijs en je verbruik
+            via de Tibber app.
           </p>
 
           <ReferralCode code={REFERRAL_CODE} />
@@ -78,8 +81,8 @@ export default function Home() {
               Hoe werkt het?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              In drie eenvoudige stappen activeer je jouw €50 tegoed met de
-              Tibber uitnodigingscode.
+              In drie eenvoudige stappen activeer je jouw €50 bonus tegoed met de
+              Tibber code (referral / uitnodigingscode).
             </p>
           </div>
           <HowItWorks />
@@ -95,7 +98,7 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Heb je nog vragen? Hier vind je antwoorden op de meest gestelde
-              vragen over de Tibber uitnodigingscode en het €50 tegoed.
+              vragen over de Tibber code, de referral bonus en het €50 tegoed.
             </p>
           </div>
           <FAQ />

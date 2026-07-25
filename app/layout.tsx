@@ -8,36 +8,50 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Tibber Uitnodigingscode 2026 - Ontvang €50 Tegoed | Referral Code',
-  description: `Gebruik mijn Tibber uitnodigingscode ${REFERRAL_CODE} en ontvang €50 tegoed voor de Tibber Store. Stap over naar dynamische energie, bespaar op je energierekening en beheer je verbruik met de Tibber app. Referral/invite code geldig in 2026.`,
+  metadataBase: new URL('https://www.tibberbonus.nl'),
+  title: 'Tibber Code 2026 – €50 Bonus & Tegoed | Tibber Referral Code',
+  description: `Tibber code nodig? Gebruik mijn Tibber referral code ${REFERRAL_CODE} en ontvang €50 bonus tegoed voor de Tibber Store. Stap over naar dynamische energie, bespaar op je energierekening en beheer je verbruik met de Tibber app. Uitnodigingscode geldig in 2026.`,
   keywords: [
-    'Tibber uitnodigingscode',
-    'Tibber referral code',
-    'Tibber invite code',
     'Tibber code',
+    'Tibber bonus',
+    'Tibber referral code',
+    'Tibber uitnodigingscode',
+    'Tibber invite code',
+    'Tibber kortingscode',
+    'Tibber korting',
+    'Tibber referral',
     'Tibber €50 tegoed',
     'Tibber aanmelden',
-    'Tibber korting',
     'dynamische energie',
     'Tibber overstappen',
   ],
+  authors: [{ name: 'Tibber Bonus' }],
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'nl_NL',
+    url: 'https://www.tibberbonus.nl',
+    siteName: 'Tibber Bonus',
+    title: 'Tibber Code 2026 – €50 Bonus & Tegoed',
+    description: `Gebruik Tibber referral code ${REFERRAL_CODE} en ontvang €50 bonus tegoed voor de Tibber Store. Stap over naar dynamische energie en bespaar.`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tibber Code 2026 – €50 Bonus & Tegoed',
+    description: `Gebruik Tibber referral code ${REFERRAL_CODE} en ontvang €50 bonus tegoed voor de Tibber Store.`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
