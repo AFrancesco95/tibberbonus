@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button"
 
 interface ReferralCodeProps {
   code: string
+  variant?: "hero" | "light"
 }
 
-export function ReferralCode({ code }: ReferralCodeProps) {
+export function ReferralCode({ code, variant = "hero" }: ReferralCodeProps) {
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = async () => {
@@ -27,6 +28,37 @@ export function ReferralCode({ code }: ReferralCodeProps) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     }
+  }
+
+  if (variant === "light") {
+    return (
+      <div className="inline-flex flex-col items-start gap-2">
+        <div className="flex items-center gap-2 bg-secondary rounded-lg px-4 py-2 border border-border">
+          <code className="text-lg font-bold tracking-wider text-foreground font-mono">
+            {code}
+          </code>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={copyToClipboard}
+            className="text-foreground hover:bg-foreground/10 h-8 w-8"
+          >
+            {copied ? (
+              <Check className="h-4 w-4" />
+            ) : (
+              <Copy className="h-4 w-4" />
+            )}
+            <span className="sr-only">Kopieer code</span>
+          </Button>
+        </div>
+        {copied && (
+          <span className="inline-flex items-center gap-1 text-sm font-medium text-primary animate-in fade-in-0 slide-in-from-bottom-2">
+            <Check className="h-3.5 w-3.5" />
+            Gekopieerd!
+          </span>
+        )}
+      </div>
+    )
   }
 
   return (
