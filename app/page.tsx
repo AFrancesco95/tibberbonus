@@ -30,7 +30,7 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-primary-foreground/70 mb-6">
-            Tibber code &amp; referral code · geldig in <CurrentPeriod />
+            Geverifieerde Tibber code · geldig in <CurrentPeriod />
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 tracking-tight text-balance">
@@ -43,10 +43,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Meld je aan met mijn <strong>Tibber code</strong> (referral / uitnodigingscode) en
-            ontvang direct <strong>€50 bonus tegoed</strong> voor de Tibber Store. Met dit
-            dynamische energiecontract krijg je realtime inzicht in de stroomprijs en je verbruik
-            via de Tibber app.
+            Gebruik deze <strong>Tibber code</strong> en ontvang <strong>€50 bonus tegoed</strong>{" "}
+            voor de Tibber Store zodra je Tibber energiecontract ingaat. Met deze Tibber code
+            activeer je eenvoudig je welkomstbonus.
           </p>
 
           <ReferralCode code={REFERRAL_CODE} />
