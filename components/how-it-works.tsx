@@ -1,4 +1,5 @@
 import { REFERRAL_CODE } from "@/lib/referral"
+import { ReferralCode } from "@/components/referral-code"
 import { Download, UserPlus, Ticket } from "lucide-react"
 
 const steps = [
@@ -16,7 +17,7 @@ const steps = [
   },
   {
     icon: Ticket,
-    title: "Voer de kortingscode in",
+    title: "Voer de Tibber code in",
     description: "Vul deze Tibber uitnodigingscode in om je €50 tegoed te activeren:",
     code: REFERRAL_CODE,
   },
@@ -45,8 +46,8 @@ export function HowItWorks() {
               {step.description}
             </p>
             {step.code && (
-              <div className="mt-4 rounded-lg bg-secondary px-4 py-2 font-mono text-lg font-bold tracking-wider text-foreground">
-                {step.code}
+              <div className="mt-4">
+                <ReferralCode code={step.code} variant="light" />
               </div>
             )}
           </div>

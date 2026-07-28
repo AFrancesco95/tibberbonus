@@ -5,9 +5,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { ExternalLink } from "lucide-react"
-import { REFERRAL_URL } from "@/lib/referral"
+import { ReferralCode } from "@/components/referral-code"
+import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 
-export const faqs = [
+type FaqItem = {
+  question: string
+  answer: string
+  hasLink?: boolean
+  code?: string
+}
+
+export const faqs: FaqItem[] = [
   {
     question: "Hoe werkt de Tibber uitnodigingscode?",
     answer: `Gebruik mijn Tibber uitnodigingscode (referral code) via de link om je aan te melden bij Tibber. Zodra je contract actief is, ontvang je automatisch €50 tegoed in de Tibber Store. Dit kun je gebruiken voor slimme producten zoals de Tibber Pulse of andere smart home apparaten.`,
@@ -38,7 +46,25 @@ export const faqs = [
     answer: `De bonus van de uitnodigingscode staat los van andere Tibber-acties. Je ontvangt sowieso €50 tegoed via mijn referral link. Check de Tibber website voor eventuele lopende promoties die je kunt combineren.`,
     hasLink: true,
   },
+  {
+    question: "Is deze Tibber code nog geldig?",
+    answer: `Ja. De Tibber code ${REFERRAL_CODE} wordt regelmatig gecontroleerd en is momenteel geldig. Gebruik deze Tibber uitnodigingscode tijdens je aanmelding bij Tibber. Zodra je Tibber energiecontract actief is, ontvang je automatisch €50 tegoed voor de Tibber Store volgens de actuele actievoorwaarden van Tibber.`,
+    code: REFERRAL_CODE,
+  },
 ]
+
+function renderAnswer(answer: string, code?: string) {
+  if (!code) return answer
+  const parts = answer.split(code)
+  return parts.map((part, index) => (
+    <span key={index}>
+      {part}
+      {index < parts.length - 1 && (
+        <strong className="font-semibold text-foreground">{code}</strong>
+      )}
+    </span>
+  ))
+}
 
 export function FAQ() {
   return (
@@ -50,7 +76,12 @@ export function FAQ() {
               {faq.question}
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground leading-relaxed">
-              {faq.answer}
+              {renderAnswer(faq.answer, faq.code)}
+              {faq.code && (
+                <div className="mt-4">
+                  <ReferralCode code={faq.code} variant="light" />
+                </div>
+              )}
               {faq.hasLink && (
                 <a
                   href={REFERRAL_URL}

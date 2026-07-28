@@ -57,7 +57,7 @@ export default function Home() {
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 h-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer">
-                Claim {"€50"} korting
+                Ontvang {"€50"} tegoed
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
