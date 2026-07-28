@@ -43,9 +43,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Gebruik deze <strong>Tibber code</strong> en ontvang <strong>€50 bonus</strong> voor de
-            Tibber Store zodra je Tibber energiecontract ingaat. Met deze Tibber code activeer je
-            eenvoudig je welkomstbonus.
+            Gebruik deze <strong>Tibber code</strong> en ontvang <strong>€50 bonus tegoed</strong>{" "}
+            voor de Tibber Store zodra je Tibber energiecontract ingaat. Met deze Tibber code
+            activeer je eenvoudig je welkomstbonus.
           </p>
 
           <ReferralCode code={REFERRAL_CODE} />
