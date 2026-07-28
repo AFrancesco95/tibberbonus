@@ -9,8 +9,8 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tibberbonus.nl'),
-  title: 'Tibber Code 2026 – €50 Bonus & Tegoed | Tibber Referral Code',
-  description: `Tibber code nodig? Gebruik mijn Tibber referral code ${REFERRAL_CODE} en ontvang €50 bonus tegoed voor de Tibber Store. Stap over naar dynamische energie, bespaar op je energierekening en beheer je verbruik met de Tibber app. Uitnodigingscode geldig in 2026.`,
+  title: 'Tibber Code 2026 | €50 Bonus & Tegoed | Referral Code',
+  description: `Tibber code gezocht? Gebruik uitnodigingscode ${REFERRAL_CODE} en ontvang €50 bonus tegoed voor de Tibber Store. Actieve Tibber code voor 2026 met een eenvoudig stappenplan om direct je welkomstbonus te claimen.`,
   keywords: [
     'Tibber code',
     'Tibber bonus',
