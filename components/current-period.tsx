@@ -21,7 +21,11 @@ export function CurrentDate() {
     setDate(formatDate(new Date()))
   }, [])
 
-  return <span suppressHydrationWarning>{date}</span>
+  return (
+    <span className="whitespace-nowrap" suppressHydrationWarning>
+      {date}
+    </span>
+  )
 }
 
 export function CurrentPeriod() {
@@ -34,5 +38,9 @@ export function CurrentPeriod() {
     setPeriod(formatPeriod(new Date()))
   }, [])
 
-  return <span suppressHydrationWarning>{period}</span>
+  return (
+    <span className="whitespace-nowrap" suppressHydrationWarning>
+      {period}
+    </span>
+  )
 }
