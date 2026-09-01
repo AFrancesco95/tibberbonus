@@ -22,7 +22,7 @@ export function CurrentDate() {
   }, [])
 
   return (
-    <span className="inline-block min-w-[8.5rem] whitespace-nowrap" suppressHydrationWarning>
+    <span className="whitespace-nowrap" suppressHydrationWarning>
       {date}
     </span>
   )
@@ -39,7 +39,7 @@ export function CurrentPeriod() {
   }, [])
 
   return (
-    <span className="inline-block min-w-[8rem] whitespace-nowrap" suppressHydrationWarning>
+    <span className="whitespace-nowrap" suppressHydrationWarning>
       {period}
     </span>
   )
