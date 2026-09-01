@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { ReferralCode } from "@/components/referral-code"
 import { FeatureCards } from "@/components/feature-cards"
 import { HowItWorks } from "@/components/how-it-works"
-import { CurrentPeriod } from "@/components/current-period"
+import { CurrentDate, CurrentPeriod } from "@/components/current-period"
 import { FAQ } from "@/components/faq"
 import { StructuredData } from "@/components/structured-data"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
@@ -121,14 +121,18 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-teal-700 via-teal-600 to-sky-600">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-teal-700 via-teal-600 to-sky-600">
+        <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
             Klaar om te besparen?
           </h2>
-          <p className="text-primary-foreground/90 max-w-2xl mx-auto text-lg mb-8">
-            Stap vandaag nog over naar Tibber en ontvang €50 tegoed. Overstappen 
-            kan binnen 5 minuten en Tibber regelt de rest.
+          <p className="text-primary-foreground/90 max-w-2xl mx-auto text-base md:text-lg mb-5 leading-relaxed">
+            Gebruik uitnodigingscode <strong>{REFERRAL_CODE}</strong> en ontvang <strong>€50 tegoed</strong>{" "}
+            voor de Tibber Store. Overstappen duurt slechts 5 minuten en Tibber regelt de volledige overstap.
+          </p>
+          <p className="text-[13px] text-[#2e7d32] mb-6 leading-relaxed">
+            ✓ Laatst gecontroleerd op <CurrentDate /> • De €50 Tibber-bonus en uitnodigingscode{" "}
+            <strong>{REFERRAL_CODE}</strong> zijn geverifieerd en momenteel actief.
           </p>
           <Button
             asChild
