@@ -30,7 +30,7 @@ export default function Home() {
           </div>
           
           <p className="text-sm text-primary-foreground/70 mb-6">
-            Geverifieerde Tibber code · geldig in <CurrentPeriod />
+            Werkende Tibber code – geldig in <CurrentPeriod />
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 tracking-tight text-balance">
