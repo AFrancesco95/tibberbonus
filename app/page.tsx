@@ -130,7 +130,7 @@ export default function Home() {
             Gebruik uitnodigingscode <strong>{REFERRAL_CODE}</strong> en ontvang <strong>€50 tegoed</strong>{" "}
             voor de Tibber Store. Overstappen duurt slechts 5 minuten en Tibber regelt de volledige overstap.
           </p>
-          <p className="text-[13px] text-[#2e7d32] mb-6 leading-relaxed">
+          <p className="mx-auto mb-6 max-w-2xl rounded-lg bg-background/95 px-4 py-3 text-[13px] font-medium leading-relaxed text-[#2e7d32] shadow-sm">
             ✓ Laatst gecontroleerd op <CurrentDate /> • De €50 Tibber-bonus en uitnodigingscode{" "}
             <strong>{REFERRAL_CODE}</strong> zijn geverifieerd en momenteel actief.
           </p>
