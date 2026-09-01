@@ -6,6 +6,24 @@ function formatPeriod(date: Date) {
   return date.toLocaleDateString("nl-NL", { month: "long", year: "numeric" })
 }
 
+function formatDate(date: Date) {
+  return date.toLocaleDateString("nl-NL", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })
+}
+
+export function CurrentDate() {
+  const [date, setDate] = useState(() => formatDate(new Date()))
+
+  useEffect(() => {
+    setDate(formatDate(new Date()))
+  }, [])
+
+  return <span suppressHydrationWarning>{date}</span>
+}
+
 export function CurrentPeriod() {
   // Initial value is computed on first render so there is no layout shift.
   // The effect re-syncs it in the visitor's browser, so it is always the
