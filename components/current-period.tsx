@@ -14,6 +14,16 @@ function formatDate(date: Date) {
   })
 }
 
+export function CurrentYear() {
+  const [year, setYear] = useState(() => new Date().getFullYear())
+
+  useEffect(() => {
+    setYear(new Date().getFullYear())
+  }, [])
+
+  return <span suppressHydrationWarning>{year}</span>
+}
+
 export function CurrentDate() {
   const [date, setDate] = useState(() => formatDate(new Date()))
 
