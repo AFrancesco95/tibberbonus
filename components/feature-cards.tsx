@@ -6,7 +6,7 @@ const features = [
     icon: TrendingDown,
     title: "Dynamische tarieven",
     description:
-      "Betaal realtime stroomprijzen en profiteer automatisch van goedkope uren. Gemiddeld 20% goedkoper dan vast tarief.",
+      "Je betaalt een variabele stroomprijs die per uur verandert. Door je verbruik naar goedkopere uren te verschuiven, kun je mogelijk besparen.",
   },
   {
     icon: Car,

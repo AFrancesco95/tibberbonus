@@ -1,4 +1,5 @@
 import { Info } from "lucide-react"
+import { CurrentYear } from "@/components/current-period"
 
 export function Footer() {
   return (
@@ -20,7 +21,7 @@ export function Footer() {
             Tibber Bonus · Persoonlijke referral pagina
           </p>
           <p className="text-sm text-muted-foreground">
-            {new Date().getFullYear()} Tibber Bonus
+            <CurrentYear /> Tibber Bonus
           </p>
         </div>
       </div>
