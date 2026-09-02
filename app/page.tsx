@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 md:py-28 scroll-mt-20">
+      <section id="faq" className="scroll-mt-20 bg-card py-20 md:py-28 text-card-foreground">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
