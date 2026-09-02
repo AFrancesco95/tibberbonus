@@ -12,12 +12,6 @@ export function Header() {
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <a
-            href="#voordelen"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Voordelen
-          </a>
-          <a
             href="#hoe-werkt-het"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -28,6 +22,12 @@ export function Header() {
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             FAQ
+          </a>
+          <a
+            href="#voordelen"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Voordelen
           </a>
         </nav>
       </div>
