@@ -25,7 +25,7 @@ export default function EnglishHome() {
           <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">Tibber Code: <span className="relative"><span className="relative z-10">€50</span></span> Bonus &amp; Credit</h1>
           <p className="mx-auto mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/90 md:text-xl">Use this <strong>Tibber code</strong> and receive <strong>€50 bonus credit</strong> for the Tibber Store once your Tibber energy contract starts. Easily activate your welcome bonus.</p>
           <ReferralCode code={REFERRAL_CODE} />
-          <div className="mt-8"><Button asChild size="lg" className="bg-primary-foreground text-lg text-primary"><a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer">Get €50 Tibber Store credit <ArrowRight className="ml-2 h-5 w-5" /></a></Button></div>
+          <div className="mt-8"><Button asChild size="lg" className="bg-primary-foreground text-lg text-primary hover:bg-primary-foreground/90 hover:text-primary"><a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer">Get €50 Tibber Store credit <ArrowRight className="ml-2 h-5 w-5" /></a></Button></div>
           <div className="mt-12 flex items-center justify-center gap-2 text-sm text-primary-foreground/80"><Clock className="h-4 w-4" />Sign up in 5 minutes</div>
         </div>
       </section>
