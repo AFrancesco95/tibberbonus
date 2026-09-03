@@ -12,6 +12,7 @@ type FaqItem = {
   question: string
   answer: string
   hasLink?: boolean
+  storeLink?: boolean
   code?: string
 }
 
@@ -38,8 +39,8 @@ export const faqs: FaqItem[] = [
   },
   {
     question: "Waar kan ik het tegoed voor gebruiken?",
-    answer: `Het €50 tegoed kun je besteden in de Tibber Store. Hier vind je slimme producten zoals de Tibber Pulse (voor realtime verbruiksinzicht), smart plugs, en andere energie-gerelateerde apparaten die je helpen nog slimmer te verbruiken.`,
-    hasLink: true,
+    answer: `Het €50 tegoed kun je besteden in de Tibber Store. Hier vind je slimme producten zoals een Easee laadpaal, de Tibber Pulse (voor realtime verbruiksinzicht), smart plugs en andere energie-gerelateerde apparaten.`,
+    storeLink: true,
   },
   {
     question: "Kan ik de Tibber uitnodigingscode combineren met andere acties?",
@@ -82,14 +83,14 @@ export function FAQ() {
                   <ReferralCode code={faq.code} variant="light" />
                 </div>
               )}
-              {faq.hasLink && (
+              {(faq.hasLink || faq.storeLink) && (
                 <a
-                  href={REFERRAL_URL}
+                  href={faq.storeLink ? "https://tibber.com/nl/store" : REFERRAL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 text-primary hover:underline font-medium"
                 >
-                  Meld je aan met €50 tegoed →
+                  {faq.storeLink ? "Bekijk de Tibber Store →" : "Meld je aan met €50 tegoed →"}
                 </a>
               )}
             </AccordionContent>

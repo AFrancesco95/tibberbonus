@@ -22,9 +22,9 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Groene energie",
+    title: "Tibber Store",
     description:
-      "100% groene stroom uit Scandinavie. Tibber investeert in duurzame energiebronnen.",
+      "Gebruik je €50 tegoed in de Tibber Store voor slimme energieproducten, zoals een Easee laadpaal, Tibber Pulse en andere producten voor je energiehuishouden.",
   },
 ]
 
