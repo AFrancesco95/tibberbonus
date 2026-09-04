@@ -1,0 +1,23 @@
+export type Locale = "nl" | "en"
+
+export const translations = {
+  nl: {
+    nav: { how: "Hoe werkt het?", faq: "FAQ", benefits: "Voordelen" },
+    hero: { badge: "Persoonlijke aanbieding", eyebrow: "Werkende Tibber code – geldig in", title: "Tibber Code", bonus: "€50", suffix: "Bonus & Tegoed", description: "Gebruik deze Tibber code en ontvang €50 bonus tegoed voor de Tibber Store zodra je Tibber energiecontract ingaat. Met deze Tibber code activeer je eenvoudig je welkomstbonus.", cta: "Ontvang €50 Tibber Store-tegoed", signup: "Aanmelden in 5 minuten" },
+    sections: { howTitle: "Hoe werkt het?", howIntro: "In drie eenvoudige stappen activeer je jouw €50 bonus tegoed met de Tibber code (referral / uitnodigingscode).", faqTitle: "Veelgestelde vragen", faqIntro: "Heb je nog vragen? Hier vind je antwoorden op de meest gestelde vragen over de Tibber code, de referral bonus en het €50 tegoed.", whyTitle: "Waarom Tibber?", whyIntro: "Tibber is geen gewone energieleverancier. Met dynamische uurtarieven betaal je de echte inkoopprijs en bespaar je door slim te verbruiken.", ctaTitle: "Klaar om te besparen?", ctaText: "Gebruik uitnodigingscode en ontvang €50 tegoed voor de Tibber Store. Overstappen duurt slechts 5 minuten en Tibber regelt de volledige overstap.", verify: "✓ Laatst gecontroleerd op", footerCta: "Gebruik deze Tibber Code" },
+    steps: ["Download de Tibber app", "Ga naar ‘Tegoed’ in het menu", "Voer de Tibber code in"],
+    stepDescriptions: ["Installeer de Tibber app op je telefoon en maak een account aan om te registreren.", "Open na de registratie het menu en klik op ‘Tegoed’. Kies daar de optie ‘Ik ben uitgenodigd’.", "Vul deze Tibber uitnodigingscode in om je €50 tegoed te activeren:"],
+    features: { titles: ["Dynamische tarieven", "Slim laden", "Slimme app", "Tibber Store"], descriptions: ["Je betaalt een variabele stroomprijs die per uur verandert. Door je verbruik naar goedkopere uren te verschuiven, kun je mogelijk besparen.", "Laad je elektrische auto automatisch op de goedkoopste momenten. De app plant het laden voor je.", "Realtime inzicht in verbruik, zonnepanelen, laadpaal en smart home. Alles in een overzichtelijke app.", "Gebruik je €50 tegoed in de Tibber Store voor slimme energieproducten, zoals een Easee laadpaal, Tibber Pulse en andere producten voor je energiehuishouden."] },
+  },
+  en: {
+    nav: { how: "How it works", faq: "FAQ", benefits: "Benefits" },
+    hero: { badge: "Personal offer", eyebrow: "Working Tibber code – valid in", title: "Tibber Code", bonus: "€50", suffix: "Bonus & Credit", description: "Use this Tibber code and receive €50 bonus credit for the Tibber Store once your Tibber energy contract starts. With this Tibber code, you can easily activate your welcome bonus.", cta: "Get €50 Tibber Store credit", signup: "Sign up in 5 minutes" },
+    sections: { howTitle: "How does it work?", howIntro: "Activate your €50 bonus credit with the Tibber code in three simple steps.", faqTitle: "Frequently asked questions", faqIntro: "Have questions? Find answers to the most common questions about the Tibber code, referral bonus and €50 credit.", whyTitle: "Why Tibber?", whyIntro: "Tibber is not a traditional energy provider. With dynamic hourly rates, you pay the actual purchase price and can save by using energy intelligently.", ctaTitle: "Ready to start saving?", ctaText: "Use the invitation code and receive €50 credit for the Tibber Store. Switching takes just 5 minutes and Tibber handles the entire switch.", verify: "✓ Last checked on", footerCta: "Use this Tibber Code" },
+    steps: ["Download the Tibber app", "Go to ‘Credit’ in the menu", "Enter the Tibber code"],
+    stepDescriptions: ["Install the Tibber app on your phone and create an account to register.", "After registering, open the menu and tap ‘Credit’. Then choose ‘I was invited’.", "Enter this Tibber invitation code to activate your €50 credit:"],
+    features: { titles: ["Dynamic rates", "Smart charging", "Smart app", "Tibber Store"], descriptions: ["You pay a variable electricity price that changes every hour. By shifting your usage to cheaper hours, you may be able to save.", "Automatically charge your electric car at the cheapest times. The app plans charging for you.", "Real-time insight into consumption, solar panels, charging and smart home devices — all in one clear app.", "Use your €50 credit in the Tibber Store for smart energy products, such as an Easee charger, Tibber Pulse and more."] },
+  },
+} as const
+
+export type Translations = (typeof translations)[Locale]
+export const getTranslations = (locale: Locale) => translations[locale]

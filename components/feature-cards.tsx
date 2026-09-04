@@ -1,5 +1,6 @@
 import { TrendingDown, Car, Smartphone, Zap } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { getTranslations, type Locale } from "@/lib/i18n/translations"
 
 const features = [
   {
@@ -28,16 +29,17 @@ const features = [
   },
 ]
 
-export function FeatureCards() {
+export function FeatureCards({ locale = "nl" }: { locale?: Locale }) {
+  const copy = getTranslations(locale).features
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {features.map((feature) => (
+      {features.map((feature, index) => ({ ...feature, title: copy.titles[index], description: copy.descriptions[index] })).map((feature) => (
         <Card
           key={feature.title}
-          className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30"
+          className="group h-full hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30"
         >
-          <CardContent className="p-6">
-            <div className="flex items-start gap-4">
+          <CardContent className="flex h-full p-6">
+            <div className="flex w-full items-start gap-4">
               <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                 <feature.icon className="h-6 w-6" />
               </div>

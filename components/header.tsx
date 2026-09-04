@@ -1,6 +1,9 @@
 import { Sparkles } from "lucide-react"
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { getTranslations, type Locale } from "@/lib/i18n/translations"
 
-export function Header() {
+export function Header({ locale = "nl" }: { locale?: Locale }) {
+  const t = getTranslations(locale)
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -15,21 +18,22 @@ export function Header() {
             href="#hoe-werkt-het"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Hoe werkt het?
+            {t.nav.how}
           </a>
           <a
             href="#faq"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            FAQ
+            {t.nav.faq}
           </a>
           <a
             href="#voordelen"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Voordelen
+            {t.nav.benefits}
           </a>
         </nav>
+        <LanguageSwitcher locale={locale} />
       </div>
     </header>
   )
