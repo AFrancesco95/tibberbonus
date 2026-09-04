@@ -9,6 +9,7 @@ import { CurrentDate, CurrentPeriod } from "@/components/current-period"
 import { FAQ } from "@/components/faq"
 import { StructuredData } from "@/components/structured-data"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
+import { JouloPromo } from "@/components/joulo-promo"
 
 export default function Home() {
   return (
@@ -119,6 +120,8 @@ export default function Home() {
           <FeatureCards />
         </div>
       </section>
+
+      <JouloPromo />
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-teal-700 via-teal-600 to-sky-600">
