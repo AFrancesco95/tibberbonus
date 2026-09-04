@@ -8,6 +8,9 @@ export function JouloPromo() {
     <section className="border-y border-border/60 bg-secondary/30 py-10 md:py-12" aria-labelledby="joulo-promo-title">
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 text-center md:grid-cols-[1fr_320px] md:gap-12 md:text-left lg:grid-cols-[1fr_380px]">
         <div>
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+            Tibber × Joulo
+          </p>
           <h2 id="joulo-promo-title" className="mb-3 text-2xl font-bold tracking-tight text-foreground md:text-3xl">
             Laad slim en verdien extra
           </h2>
@@ -31,10 +34,10 @@ export function JouloPromo() {
             </a>
           </Button>
           <p className="mt-4 text-xs text-muted-foreground">
-            Joulo rekent slechts 10% servicekosten over de ERE-uitbetaling.
+            Joulo rekent slechts 10% servicekosten over de ERE-uitbetaling als je klant bent bij Tibber.
           </p>
         </div>
-        <div className="relative order-first hidden overflow-hidden rounded-2xl border border-border/60 bg-card md:order-none md:block">
+        <div className="relative order-first hidden overflow-hidden bg-transparent md:order-none md:block">
           <Image
             src="/easee-charge-max.webp"
             alt="Easee Charge Max laadpaal"

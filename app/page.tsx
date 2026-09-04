@@ -91,8 +91,8 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section id="faq" className="scroll-mt-20 bg-card py-20 md:py-28 text-card-foreground">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="text-center mb-12">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Veelgestelde vragen
             </h2>
@@ -101,7 +101,9 @@ export default function Home() {
               vragen over de Tibber code, de referral bonus en het €50 tegoed.
             </p>
           </div>
-          <FAQ />
+          <div className="rounded-2xl border border-border/60 bg-background px-5 py-3 shadow-sm md:px-8">
+            <FAQ />
+          </div>
         </div>
       </section>
 
