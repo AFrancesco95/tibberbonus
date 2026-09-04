@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Gift, Clock } from "lucide-react"
+import { ArrowRight, ExternalLink, Gift, Clock } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ReferralCode } from "@/components/referral-code"
@@ -9,6 +9,7 @@ import { CurrentDate, CurrentPeriod } from "@/components/current-period"
 import { FAQ } from "@/components/faq"
 import { StructuredData } from "@/components/structured-data"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
+import { JouloPromo } from "@/components/joulo-promo"
 
 export default function Home() {
   return (
@@ -90,8 +91,8 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section id="faq" className="scroll-mt-20 bg-card py-20 md:py-28 text-card-foreground">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="text-center mb-12">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Veelgestelde vragen
             </h2>
@@ -100,7 +101,18 @@ export default function Home() {
               vragen over de Tibber code, de referral bonus en het €50 tegoed.
             </p>
           </div>
-          <FAQ />
+          <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-background px-5 py-3 text-center shadow-sm md:px-8">
+            <FAQ />
+          </div>
+          <div className="mx-auto mt-6 max-w-3xl rounded-xl border border-border/60 bg-muted/50 px-5 py-4 text-center">
+            <p className="text-sm text-muted-foreground">
+              Heb je vragen over Tibber, dynamische energie, of je contract? Bekijk de{" "}
+              <a href="https://tibber.com/nl/support" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+                officiële Tibber FAQ
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -119,6 +131,8 @@ export default function Home() {
           <FeatureCards />
         </div>
       </section>
+
+      <JouloPromo />
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-teal-700 via-teal-600 to-sky-600">
