@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { ExternalLink } from "lucide-react"
 import { ReferralCode } from "@/components/referral-code"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 
@@ -84,34 +83,20 @@ export function FAQ() {
                 </div>
               )}
               {(faq.hasLink || faq.storeLink) && (
-                <a
+                <>{" "}<a
                   href={faq.storeLink ? "https://tibber.com/nl/store" : REFERRAL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 text-primary hover:underline font-medium"
                 >
                   {faq.storeLink ? "Bekijk de Tibber Store →" : "Meld je aan met €50 tegoed →"}
-                </a>
+                </a></>
               )}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
-      
-      <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-border">
-        <p className="text-sm text-muted-foreground">
-          Heb je vragen over Tibber, dynamische energie, of je contract? Bekijk de{" "}
-          <a
-            href="https://tibber.com/nl/support"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline font-medium inline-flex items-center gap-1"
-          >
-            officiële Tibber FAQ
-            <ExternalLink className="h-3 w-3" />
-          </a>
-        </p>
-      </div>
+
     </div>
   )
 }
