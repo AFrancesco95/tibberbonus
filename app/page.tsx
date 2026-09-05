@@ -138,7 +138,7 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-gradient-to-br from-teal-700 via-teal-600 to-sky-600">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
-            Klaar om te besparen?
+            Pak je Tibber voordeel
           </h2>
           <p className="text-primary-foreground/90 max-w-2xl mx-auto text-base md:text-lg mb-5 leading-relaxed">
             Gebruik uitnodigingscode <strong>{REFERRAL_CODE}</strong> en ontvang <strong>€50 tegoed</strong>{" "}
@@ -147,16 +147,6 @@ export default function Home() {
           <p className="mx-auto mb-6 max-w-2xl rounded-lg bg-background/95 px-4 py-3 text-[13px] font-medium leading-relaxed text-[#2e7d32] shadow-sm">
             ✓ Laatst gecontroleerd op <CurrentDate />
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 h-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer">
-              Gebruik deze Tibber Code
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
         </div>
       </section>
 
