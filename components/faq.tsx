@@ -72,26 +72,30 @@ export function FAQ() {
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="text-left hover:text-primary transition-colors">
-              {faq.question}
+            <AccordionTrigger className="text-center hover:text-primary transition-colors [&>svg]:shrink-0">
+              <span className="w-full text-center">{faq.question}</span>
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground leading-relaxed">
-              {renderAnswer(faq.answer, faq.code)}
-              {faq.code && (
-                <div className="mt-4">
-                  <ReferralCode code={faq.code} variant="light" />
-                </div>
-              )}
-              {(faq.hasLink || faq.storeLink) && (
-                <>{" "}<a
-                  href={faq.storeLink ? "https://tibber.com/nl/store" : REFERRAL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-3 text-primary hover:underline font-medium"
-                >
-                  {faq.storeLink ? "Bekijk de Tibber Store →" : "Meld je aan met €50 tegoed →"}
-                </a></>
-              )}
+              <div className="text-center">
+                <p>{renderAnswer(faq.answer, faq.code)}</p>
+                {faq.code && (
+                  <div className="mt-4 flex justify-center">
+                    <ReferralCode code={faq.code} variant="light" />
+                  </div>
+                )}
+                {(faq.hasLink || faq.storeLink) && (
+                  <div className="mt-4">
+                    <a
+                      href={faq.storeLink ? "https://tibber.com/nl/store" : REFERRAL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary hover:underline"
+                    >
+                      {faq.storeLink ? "Bekijk de Tibber Store →" : "Meld je aan met €50 tegoed →"}
+                    </a>
+                  </div>
+                )}
+              </div>
             </AccordionContent>
           </AccordionItem>
         ))}

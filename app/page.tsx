@@ -89,33 +89,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="scroll-mt-20 bg-card py-20 md:py-28 text-card-foreground">
-        <div className="mx-auto max-w-4xl px-4">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Veelgestelde vragen
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Heb je nog vragen? Hier vind je antwoorden op de meest gestelde
-              vragen over de Tibber code, de referral bonus en het €50 tegoed.
-            </p>
-          </div>
-          <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-background px-5 py-3 text-center shadow-sm md:px-8">
-            <FAQ />
-          </div>
-          <div className="mx-auto mt-6 max-w-3xl rounded-xl border border-border/60 bg-muted/50 px-5 py-4 text-center">
-            <p className="text-sm text-muted-foreground">
-              Heb je vragen over Tibber, dynamische energie, of je contract? Bekijk de{" "}
-              <a href="https://tibber.com/nl/support" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
-                officiële Tibber FAQ
-                <ExternalLink className="h-3 w-3" />
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section id="voordelen" className="py-20 md:py-28 bg-secondary/30 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4">
@@ -134,29 +107,48 @@ export default function Home() {
 
       <JouloPromo />
 
+      {/* FAQ Section */}
+      <section id="faq" className="scroll-mt-20 bg-card py-20 text-card-foreground md:py-28">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
+              Veelgestelde vragen
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Heb je nog vragen? Hier vind je antwoorden op de meest gestelde vragen over de Tibber code, de referral bonus en het €50 tegoed.
+            </p>
+          </div>
+          <div className="mx-auto max-w-3xl rounded-2xl border border-border/60 bg-background px-5 py-3 text-center shadow-sm md:px-8">
+            <FAQ />
+          </div>
+          <div className="mx-auto mt-6 max-w-3xl rounded-xl border border-border/60 bg-muted/50 px-5 py-4 text-center">
+            <p className="text-sm text-muted-foreground">
+              Heb je vragen over Tibber, dynamische energie, of je contract? Bekijk de{" "}
+              <a href="https://tibber.com/nl/support" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-medium text-primary hover:underline">
+                officiële Tibber FAQ
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-teal-700 via-teal-600 to-sky-600">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
-            Klaar om te besparen?
+            Pak je Tibber voordeel
           </h2>
           <p className="text-primary-foreground/90 max-w-2xl mx-auto text-base md:text-lg mb-5 leading-relaxed">
             Gebruik uitnodigingscode <strong>{REFERRAL_CODE}</strong> en ontvang <strong>€50 tegoed</strong>{" "}
             voor de Tibber Store. Overstappen duurt slechts 5 minuten en Tibber regelt de volledige overstap.
           </p>
+          <div className="mb-6 flex justify-center">
+            <ReferralCode code={REFERRAL_CODE} />
+          </div>
           <p className="mx-auto mb-6 max-w-2xl rounded-lg bg-background/95 px-4 py-3 text-[13px] font-medium leading-relaxed text-[#2e7d32] shadow-sm">
             ✓ Laatst gecontroleerd op <CurrentDate />
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 h-auto rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer">
-              Gebruik deze Tibber Code
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
         </div>
       </section>
 
