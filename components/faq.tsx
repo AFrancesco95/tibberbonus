@@ -18,12 +18,12 @@ type FaqItem = {
 export const faqs: FaqItem[] = [
   {
     question: "Hoe werkt de Tibber uitnodigingscode?",
-    answer: `Gebruik mijn Tibber uitnodigingscode (referral code) via de link om je aan te melden bij Tibber. Zodra je contract actief is, ontvang je automatisch €50 tegoed in de Tibber Store. Dit kun je gebruiken voor slimme producten zoals de Tibber Pulse of andere smart home apparaten.`,
+    answer: `Gebruik de Tibber uitnodigingscode (referral code) via de uitnodigingslink om je aan te melden bij Tibber. Zodra het contract actief is, wordt automatisch €50 tegoed toegekend aan de Tibber Store. Dit tegoed kan worden gebruikt voor slimme producten, zoals de Tibber Pulse of andere smart home-apparaten.`,
     hasLink: true,
   },
   {
     question: "Waar vul ik de Tibber uitnodigingscode in?",
-    answer: `De eenvoudigste manier is via mijn uitnodigingslink: de referral code wordt dan automatisch gekoppeld aan je aanmelding. Meld je je los aan? Dan kun je de Tibber invite code handmatig invullen tijdens het aanmeldproces in de Tibber app.`,
+    answer: `De eenvoudigste manier is via de uitnodigingslink. De referral code wordt dan automatisch aan de aanmelding gekoppeld. Liever zelf aanmelden? Download de Tibber app en meld je aan. Ga vervolgens naar Bonus/Tegoed, kies ‘Ik ben uitgenodigd’ en vul de invite code ${REFERRAL_CODE} in. Zodra het contract start, wordt het tegoed toegekend.`,
     hasLink: true,
   },
   {
