@@ -13,24 +13,24 @@ export function Header({ locale = "nl" }: { locale?: Locale }) {
           </div>
           <span className="font-semibold text-lg">Tibber Bonus</span>
         </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden items-center gap-1 rounded-full border border-border/60 bg-muted/50 p-1 text-sm md:flex" aria-label="Hoofdnavigatie">
           <a
             href="#hoe-werkt-het"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="rounded-full px-4 py-2 text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
           >
             {t.nav.how}
           </a>
           <a
-            href="#faq"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {t.nav.faq}
-          </a>
-          <a
             href="#voordelen"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="rounded-full px-4 py-2 text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
           >
             {t.nav.benefits}
+          </a>
+          <a
+            href="#faq"
+            className="rounded-full px-4 py-2 text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+          >
+            {t.nav.faq}
           </a>
         </nav>
         <LanguageSwitcher locale={locale} />
