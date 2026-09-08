@@ -6,6 +6,10 @@ function formatPeriod(date: Date) {
   return date.toLocaleDateString("nl-NL", { month: "long", year: "numeric" })
 }
 
+function formatYear(date: Date) {
+  return date.getFullYear()
+}
+
 function formatDate(date: Date) {
   return date.toLocaleDateString("nl-NL", {
     day: "numeric",
@@ -14,22 +18,27 @@ function formatDate(date: Date) {
   })
 }
 
-export function CurrentYear() {
-  const [year, setYear] = useState(() => new Date().getFullYear())
+function useLiveDate<T>(format: (date: Date) => T) {
+  const [value, setValue] = useState(() => format(new Date()))
 
   useEffect(() => {
-    setYear(new Date().getFullYear())
-  }, [])
+    const update = () => setValue(format(new Date()))
+    update()
 
+    const interval = window.setInterval(update, 60_000)
+    return () => window.clearInterval(interval)
+  }, [format])
+
+  return value
+}
+
+export function CurrentYear() {
+  const year = useLiveDate(formatYear)
   return <span suppressHydrationWarning>{year}</span>
 }
 
 export function CurrentDate() {
-  const [date, setDate] = useState(() => formatDate(new Date()))
-
-  useEffect(() => {
-    setDate(formatDate(new Date()))
-  }, [])
+  const date = useLiveDate(formatDate)
 
   return (
     <span className="whitespace-nowrap" suppressHydrationWarning>
@@ -39,14 +48,7 @@ export function CurrentDate() {
 }
 
 export function CurrentPeriod() {
-  // Initial value is computed on first render so there is no layout shift.
-  // The effect re-syncs it in the visitor's browser, so it is always the
-  // real current month/year — no redeploy needed when the month changes.
-  const [period, setPeriod] = useState(() => formatPeriod(new Date()))
-
-  useEffect(() => {
-    setPeriod(formatPeriod(new Date()))
-  }, [])
+  const period = useLiveDate(formatPeriod)
 
   return (
     <span className="whitespace-nowrap" suppressHydrationWarning>
