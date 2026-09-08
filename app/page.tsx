@@ -10,6 +10,7 @@ import { FAQ } from "@/components/faq"
 import { StructuredData } from "@/components/structured-data"
 import { REFERRAL_CODE, REFERRAL_URL } from "@/lib/referral"
 import { JouloPromo } from "@/components/joulo-promo"
+import { TibberOffers } from "@/components/tibber-offers"
 
 export default function Home() {
   return (
@@ -105,6 +106,7 @@ export default function Home() {
         </div>
       </section>
 
+      <TibberOffers />
       <JouloPromo />
 
       {/* FAQ Section */}
