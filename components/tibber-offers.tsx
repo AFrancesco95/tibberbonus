@@ -13,22 +13,22 @@ const OFFERS_URL = "https://tibber.com/nl/store/aanbiedingen"
 
 const fallbackOffers: Offer[] = [
   {
-    title: "Zaptec Go 2",
-    description: "Bespaar €120 en ontvang gratis Chill. Bekijk de actuele voorwaarden.",
+    title: "Slimme thuisbatterijen",
+    description: "Bekijk de actuele korting op slimme thuisbatterijen en ontdek hoe je meer uit je energie kunt halen.",
     href: OFFERS_URL,
-    badge: "€120 korting",
+    badge: "Actuele korting",
   },
   {
-    title: "Zaptec Go",
-    description: "Profiteer van €60 korting op deze slimme laadpaal.",
+    title: "Tibber Pulse",
+    description: "Krijg realtime inzicht in je energieverbruik met Tibber Pulse. Bekijk de actuele aanbieding.",
     href: OFFERS_URL,
-    badge: "€60 korting",
+    badge: "Actuele aanbieding",
   },
   {
-    title: "Charge Amps laadpunten",
-    description: "Actuele aanbiedingen op Luna, Halo, Dawn en Aura.",
+    title: "Slim laden",
+    description: "Ontdek actuele aanbiedingen op slimme laadpalen en laad je auto op wanneer stroom goedkoper is.",
     href: OFFERS_URL,
-    badge: "Aanbieding",
+    badge: "Tibber Store",
   },
 ]
 
@@ -37,21 +37,37 @@ function parseOffers(html: string): Offer[] {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ")
   const headings = headingMatches
     .map((match) => match[1].replace(/&[^;]+;/g, "").trim())
-    .filter((heading) => /Zaptec|Charge Amps/i.test(heading))
+    .filter((heading) => heading.length > 2)
 
-  const liveOffers = headings.slice(0, 3).map((title, index) => ({
-    title,
-    description:
-      index === 0
-        ? text.match(/Bespaar €[^.]+\./i)?.[0] ?? "Bekijk de actuele Tibber-aanbieding."
-        : index === 1
-          ? "Bekijk de actuele korting en voorwaarden in de Tibber Store."
-          : "Ontdek de actuele aanbiedingen en voorwaarden in de Tibber Store.",
-    href: OFFERS_URL,
-    badge: index === 0 ? "Actuele aanbieding" : "Tibber Store",
-  }))
+  const categories = [
+    {
+      match: /thuisbatterij|battery|batterij/i,
+      fallback: fallbackOffers[0],
+      badge: "Actuele korting",
+      description: "Bekijk de actuele korting op slimme thuisbatterijen en ontdek hoe je meer uit je energie kunt halen.",
+    },
+    {
+      match: /tibber pulse|pulse/i,
+      fallback: fallbackOffers[1],
+      badge: "Actuele aanbieding",
+      description: "Krijg realtime inzicht in je energieverbruik met Tibber Pulse. Bekijk de actuele aanbieding.",
+    },
+    {
+      match: /zaptec|charge amps|easee|laadpaal|charger|laden/i,
+      fallback: fallbackOffers[2],
+      badge: "Tibber Store",
+      description: "Ontdek actuele aanbiedingen op slimme laadpalen en laad je auto op wanneer stroom goedkoper is.",
+    },
+  ]
 
-  return [...liveOffers, ...fallbackOffers].slice(0, 3)
+  const liveOffers = categories.map(({ match, fallback, badge, description }) => {
+    const title = headings.find((heading) => match.test(heading))
+    return title
+      ? { title, description, href: OFFERS_URL, badge }
+      : fallback
+  })
+
+  return liveOffers
 }
 
 async function getOffers(): Promise<Offer[]> {
