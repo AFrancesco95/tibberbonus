@@ -33,15 +33,13 @@ const fallbackOffers: Offer[] = [
 ]
 
 function parseOffers(html: string): Offer[] {
-  const headingMatches = [...html.matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/gi)]
+  const headingMatches = [...html.matchAll(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/gi)]
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ")
   const headings = headingMatches
     .map((match) => match[1].replace(/&[^;]+;/g, "").trim())
     .filter((heading) => /Zaptec|Charge Amps/i.test(heading))
 
-  if (headings.length === 0) return fallbackOffers
-
-  return headings.slice(0, 3).map((title, index) => ({
+  const liveOffers = headings.slice(0, 3).map((title, index) => ({
     title,
     description:
       index === 0
@@ -52,6 +50,8 @@ function parseOffers(html: string): Offer[] {
     href: OFFERS_URL,
     badge: index === 0 ? "Actuele aanbieding" : "Tibber Store",
   }))
+
+  return [...liveOffers, ...fallbackOffers].slice(0, 3)
 }
 
 async function getOffers(): Promise<Offer[]> {
